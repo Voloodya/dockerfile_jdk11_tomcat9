@@ -132,7 +132,8 @@ RUN set -eux; \
 		echo >&2 "$nativeLines"; \
 		exit 1; \
 	fi
+
+WORKDIR /usr/local/tomcat/webapps
 	
-COPY E:\Authorization_service_prjct\authorizationService\target\authorizationService-0.0.1-SNAPSHOT.war : /usr/local/tomcat/webapps
 EXPOSE 80
 CMD ["catalina.sh", "run"]
